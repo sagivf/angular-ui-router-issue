@@ -1,0 +1,17 @@
+<div class="clearfix">
+  <div class="image-wrapper">
+    <img ng-src="{{image}}" />
+  </div>
+  <h3>{{name}}</h3>
+</div>
+<div class="user-advanced-details">
+  <div ng-show="loading" class="spinner-container">
+    <div class="spinner"></div>
+  </div>
+  <div ng-show="error" class="alert alert-danger">Oh snap! Cant load content at this time - {{error}}</div>
+  <label>Name:</label> {{info.id}}<br/>
+  <label>Birthday:</label> {{ info.dateOfBirth }}<br/>
+  <label>Works:</label> {{ info.works}}<br/>
+  <label>Town:</label> {{ info.town}}<br/>
+  <label>Dog:</label> {{ info.dog}}
+</div>

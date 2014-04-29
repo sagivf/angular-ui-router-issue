@@ -1,0 +1,20 @@
+<div class="users row">
+  <div class="list span6">
+    <h3>
+      <img src="https://www.facebook.com/images/profile/timeline/app_icons/friends_24.png" alt="">
+      <a>Users</a>
+    </h3>
+    <div class="items">
+      <div ng-repeat="user in users">
+        <!--<a href="/#/users/{{user.id}}">-->
+       <a ui-sref-active="active" ui-sref=".user({ userId: user.id })">
+         <img ng-src="{{user.image}}" alt="" height="100" width="100"/>
+          <span>{{user.name}}</span>
+       </a>
+      </div>
+    </div>
+  </div>
+  <div class="details span6">
+    <ui-view></ui-view>
+  </div>
+</div>
